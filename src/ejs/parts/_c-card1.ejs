@@ -1,0 +1,18 @@
+<%# 記述例 : include(baseMeta.path + 'parts/_c-card1', { link:'', img:'' , alt:'', title:'', text:'', cat:'', datetime:'', time:''} )%>
+<div class="c-card1">
+  <a href="<%= link %>">
+    <figure class="c-card1__img">
+      <img src="<%= img %>" alt="<%= alt %>">
+    </figure>
+    <div class="c-card1__body">
+      <h3 class="c-card1__title"><%= title %></h3>
+      <div class="c-card1__text-box">
+        <p class="c-card1__text"><%= text %></p>
+      </div>
+    </div>
+    <div class="c-card1__bottom">
+      <span class="c-card1__category"><%= cat %></span>
+      <time class="c-card1__time" datetime="<%= datetime %>"><%= time %></time>
+    </div>
+  </a>
+</div>

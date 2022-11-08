@@ -1,0 +1,37 @@
+@use 'global' as * ; 
+
+.c-page-top {
+  width: rem(45);
+  height: rem(45);
+  background: $white;
+  position: fixed;
+  bottom: rem(50);
+  right: rem(20);
+  transition: .3s;
+  cursor: pointer;
+}
+
+.c-page-top span:first-child {
+  display: inline-block;
+  width: rem(20);
+  height: rem(2);
+  background: $back;
+  transform: rotate(-45deg) translateX(3px);
+  transform-origin: right;
+  transition: .3s;
+}
+.c-page-top span:nth-child(2) {
+  display: inline-block;
+  width: rem(20);
+  height: rem(2);
+  background: $back;
+  transform: rotate(45deg)translateX(-3px);
+  transform-origin: left;
+  transition: .3s;
+}
+.c-page-top:hover {
+  background: $back;
+  span {
+    background: $white;
+  }
+}
