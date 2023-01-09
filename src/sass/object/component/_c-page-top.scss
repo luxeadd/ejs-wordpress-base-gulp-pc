@@ -9,8 +9,15 @@
   right: rem(20);
   transition: .3s;
   cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
-
+.c-page-top.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+}
 .c-page-top span:first-child {
   display: inline-block;
   width: rem(20);

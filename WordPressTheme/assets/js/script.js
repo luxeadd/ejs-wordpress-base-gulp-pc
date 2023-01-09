@@ -1,23 +1,5 @@
 "use strict";
 
-//画面幅が変わったら読み込み直し
-const resize = ()=>{
- 
-  let timeoutID = 0;
-  let delay = 500;
-
-  window.addEventListener("resize", ()=>{
-      clearTimeout(timeoutID);
-      timeoutID = setTimeout(()=>{
-
-        location.reload()
-
-      }, delay);
-  }, false);
-};
-
-resize();
-
 //header
 //ハンバーガーメニュー---------------
 const jsHamburger = document.getElementById('js-hamburger');
@@ -52,76 +34,52 @@ drawerMenuItems[a].addEventListener('click', () => {
 });
 }
 
-//スクロールしたらheaderの色を変える
-//headerにchange-colorクラスをつけ色を指定
-let jsHeader = document.querySelector('.js-header');
-let jsMv = document.querySelector('.js-mv');
-let mv_h = jsMv.clientHeight;
- 
+
+//スクロールしたらページトップ出現
+let jsPageTop = document.querySelector('.js-page-top'); 
 window.addEventListener('scroll', () => {
-  if (window.scrollY >= mv_h) {
-    jsHeader.classList.add('change-color');
+  if (window.scrollY >= 100) {
+    jsPageTop.classList.add('is-active');
   }
-  if (window.scrollY < mv_h) {
-    jsHeader.classList.remove('change-color');
+  if (window.scrollY < 100) {
+    jsPageTop.classList.remove('is-active');
   }
 })
 
 
 
 
-
-
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
-  /* 電話リンク */
-	let ua = navigator.userAgent;
-	if (ua.indexOf("iPhone") < 0 && ua.indexOf("Android") < 0) {
-		jQuery('a[href^="tel:"]')
-			.css("cursor", "default")
-			.on("click", function(e) {
-				e.preventDefault();
-			});
-	};
-
-  /* ページトップ */
-  var topBtn = $('.js-pagetop');
-  topBtn.hide();
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 70) {
-      topBtn.fadeIn();
-    } else {
-      topBtn.fadeOut();
-    }
+ //ドロワーメニュー展開時背景固定------------------
+  // screen lock
+  var lockTop = 0;
+  var screenLock = function() {
+    lockTop = $(window).scrollTop();
+    $("html").addClass("is-screen-locked").css({
+      top: -lockTop
+    });
+  };
+  // screen unlock
+  var screenUnlock = function() {
+    $("html").removeClass("is-screen-locked").removeAttr("style");
+    $(window).scrollTop(lockTop);
+  };
+  $(function(){
+    $('#js-hamburger').on('click', function (){
+        if (!$(this).hasClass('is-active')) {
+          $(this).addClass('is-active');
+            screenLock();
+        } else {
+          $(this).removeClass('is-active');
+            screenUnlock();
+        }
+    });
   });
-  topBtn.click(function () {
-    $('body,html').animate({
-      scrollTop: 0
-    }, 300, 'swing');
-    return false;
-  });
-
-   /* DOM操作 */
-  // $("#MenuButton").click(function () {
-  //   $(".js-drawer-open").toggleClass("open");
-  //   $(".drawer-menu").toggleClass("open");
-  //   $("html").toggleClass("is-fixed");
-
-  // });
-
-  
-  //スクロールしたらheaderの色を変える
-  //headerにchange-colorクラスをつけ色を指定
-  jQuery(window).on('scroll', function () {
-    var MV =  jQuery(".js-mv").innerHeight(); 
-      if (  MV <  jQuery(this).scrollTop()) { 
-      jQuery('.js-header').addClass('change-color'); }
-      else {
-      jQuery('.js-header').removeClass('change-color'); } });
 
 
-  // スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動)
+// スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動)
   $(document).on('click', 'a[href*="#"]', function () {
-    let time = 400;
+    let time = 300;
     let header = $('header').innerHeight();
     let target = $(this.hash);
     if (!target.length) return;
@@ -129,5 +87,15 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     $('html,body').animate({ scrollTop: targetY }, time, 'swing');
     return false;
   });
+
+/* ページトップスムーススクロール */
+// var topBtn = $('.js-page-top');
+// topBtn.click(function () {
+//   $('body,html').animate({
+//     scrollTop: 0
+//   }, 300, 'swing');
+//   return false;
+// });
+
 
 });

@@ -119,3 +119,20 @@ $mediaquerys: (
     display: block;
   }
 }
+//スマホ時のみ電話リンク有効
+@media (min-width: 600px) {
+  a[href*="tel:"] {
+  pointer-events: none;
+  cursor: default;
+  // text-decoration: none;
+  }
+  }
+
+//ドロワーメニュー展開時背景固定
+  html.is-screen-locked {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
