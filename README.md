@@ -1,4 +1,4 @@
-# 【DartSass】Gulp　EJS WordPress　環境（スマホファースト）
+# 【DartSass】Gulp　EJS WordPress　環境（PCファースト）
 
 ## 環境
 - Gulpが使える環境が前提（4系）
