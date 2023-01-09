@@ -412,6 +412,10 @@ select {
     font-size: 0.6875rem;
   }
 }
+.p-header-menu {
+  height: inherit;
+}
+
 .p-header-menu__items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -425,6 +429,7 @@ select {
 
 .p-header-menu__item {
   height: inherit;
+  color: #fff;
 }
 
 .p-header-menu__item + .p-header-menu__item {
@@ -458,7 +463,6 @@ select {
     right: 0;
     bottom: 0;
     overflow-y: scroll;
-    color: #fff;
     -webkit-transform: translateX(2000px);
             transform: translateX(2000px);
     -webkit-transition: 0.4s;

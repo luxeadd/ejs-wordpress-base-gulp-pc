@@ -1,7 +1,7 @@
 @use 'global' as * ; 
 
 .p-header-menu {
- 
+  height: inherit;
  
 }
 
@@ -16,7 +16,7 @@
 
 .p-header-menu__item {
   height: inherit;
-
+  color: #fff;
 }
 
 .p-header-menu__item + .p-header-menu__item {
@@ -47,7 +47,7 @@
   right: 0;
   bottom: 0;
   overflow-y: scroll;
-  color: #fff;
+ 
   transform: translateX(2000px);
   transition: 0.4s;
   z-index: 4;
