@@ -33,6 +33,7 @@ const destWpPath = {
 }
 
 
+
 // ブラウザーシンク（リアルタイムでブラウザに反映させる処理）
 const browserSync = require("browser-sync");
 const browserSyncOption = {
@@ -48,14 +49,14 @@ const browserSyncReload = (done) => {
 
 
 // Sassファイルのコンパイル処理（DartSass対応）
-const sass = require('gulp-sass')(require('sass'));
-const sassGlob = require('gulp-sass-glob-use-forward');
-const plumber = require("gulp-plumber");
-const notify = require("gulp-notify");
-const postcss = require("gulp-postcss");
+const sass = require('gulp-sass')(require('sass'));//sass使用用
+const sassGlob = require('gulp-sass-glob-use-forward');//glob機能を使って@useや@forwardを省略する（まとめる？）プラグイン。
+const plumber = require("gulp-plumber");//エラーが原因でタスクが強制停止することを防止するモジュール
+const notify = require("gulp-notify");//エラー通知
+const postcss = require("gulp-postcss");//CSS系のいろいろなプラグインの統合
 const cssnext = require("postcss-cssnext")
 // const cleanCSS = require("gulp-clean-css");
-const sourcemaps = require("gulp-sourcemaps");
+const sourcemaps = require("gulp-sourcemaps");//Sassのコンパイル前の行数がわかるようにする
 const browsers = [
     'last 2 versions',
     '> 5%',
