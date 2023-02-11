@@ -23,27 +23,35 @@ $second-font-family: 'Noto Serif', serif;
 
 
 // フォントウェイト
-$regular: 300;
+$light: 300;
 $normal: 400;
+$medium: 500;
+$semi-bold: 600;
 $bold: 700;
+$ex-bold: 800;
+
+// z-index
+$header: 100;
+$drawer: 102;
+$drawer-back: 101;
+$page-top: 100;
+
 
 ////////////////////
 // 色の指定
 ////////////////////
 
 //色指定（共通性のあるものは出来る限り指定すると良い）
-$base: #000;
+$base-font-color: #000;
 $back: #333;
-$back2: #3D3D3D;
-$yellow:#F9F871;
 $white: #fff;
 
 
 body {
   font-family: $base-font-family;
-  color: $base;
+  color: $base-font-color;
   font-weight: $normal;
-  background: $base;
+  background: $back;
 }
 
 // メディアクエリとブレークポイントの設定

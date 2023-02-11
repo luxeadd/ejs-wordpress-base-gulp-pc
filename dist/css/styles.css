@@ -3,7 +3,7 @@ body {
   font-family: "Noto Sans JP", sans-serif;
   color: #000;
   font-weight: 400;
-  background: #000;
+  background: #333;
 }
 
 .u-lg-desktop {
@@ -264,6 +264,7 @@ select {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  z-index: 100;
 }
 
 .c-page-top.is-active {
@@ -356,7 +357,7 @@ select {
   height: 1px;
   margin-top: 5px;
   margin-top: 0.3125rem;
-  background: #F9F871;
+  background: yellow;
   opacity: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -562,12 +563,12 @@ select {
           transform: translateY(-50%);
   right: 20px;
   right: 1.25rem;
-  z-index: 101;
+  z-index: 102;
 }
 
 .p-header__overlay {
   position: fixed;
-  z-index: 3;
+  z-index: 101;
   width: 100vw;
   top: 0;
   right: 0;

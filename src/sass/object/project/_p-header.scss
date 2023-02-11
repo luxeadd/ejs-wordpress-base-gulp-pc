@@ -8,7 +8,7 @@
   left: 0;
   right: 0;
   width: 100%;
-  z-index: 100;
+  z-index: $header;
   transition: .3s;
   }
  
@@ -53,7 +53,7 @@
     top: rem(25);
     transform: translateY(-50%);
     right: rem(20);
-    z-index: 101;
+    z-index: $drawer;
     
   
   }
@@ -65,7 +65,7 @@
   
   .p-header__overlay {
    position: fixed;
-   z-index: 3;
+   z-index: $drawer-back;
    width: 100vw;
    top: 0;
    right: 0;
