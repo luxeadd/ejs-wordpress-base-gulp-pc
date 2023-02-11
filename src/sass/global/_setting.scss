@@ -127,6 +127,70 @@ $mediaquerys: (
     display: block;
   }
 }
+
+// フォントサイズ管理
+.u-fz12 {
+  font-size: rem(12);
+  @include mq(md) {
+    font-size: rem(12);
+  }
+}
+.u-fz14 {
+  font-size: rem(14);
+  @include mq(md) {
+    font-size: rem(14);
+  }
+}
+.u-fz16 {
+  font-size: rem(16);
+  @include mq(md) {
+    font-size: rem(16);
+  }
+}
+.u-fz18 {
+  font-size: rem(18);
+  @include mq(md) {
+    font-size: rem(18);
+  }
+}
+.u-fz20 {
+  font-size: rem(20);
+  @include mq(md) {
+    font-size: rem(20);
+  }
+}
+.u-fz22 {
+  font-size: rem(22);
+  @include mq(md) {
+    font-size: rem(22);
+  }
+}
+.u-fz24 {
+  font-size: rem(24);
+  @include mq(md) {
+    font-size: rem(24);
+  }
+}
+.u-fz26 {
+  font-size: rem(26);
+  @include mq(md) {
+    font-size: rem(26);
+  }
+}
+.u-fz28 {
+  font-size: rem(28);
+  @include mq(md) {
+    font-size: rem(28);
+  }
+}
+.u-fz30 {
+  font-size: rem(30);
+  @include mq(md) {
+    font-size: rem(30);
+  }
+}
+
+
 //スマホ時のみ電話リンク有効
 @media (min-width: 600px) {
   a[href*="tel:"] {

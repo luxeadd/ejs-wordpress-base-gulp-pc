@@ -33,6 +33,106 @@ body {
   }
 }
 
+.u-fz12 {
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+@media screen and (max-width: 767px) {
+  .u-fz12 {
+    font-size: 0.75rem;
+  }
+}
+
+.u-fz14 {
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+@media screen and (max-width: 767px) {
+  .u-fz14 {
+    font-size: 0.875rem;
+  }
+}
+
+.u-fz16 {
+  font-size: 16px;
+  font-size: 1rem;
+}
+@media screen and (max-width: 767px) {
+  .u-fz16 {
+    font-size: 1rem;
+  }
+}
+
+.u-fz18 {
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+@media screen and (max-width: 767px) {
+  .u-fz18 {
+    font-size: 1.125rem;
+  }
+}
+
+.u-fz20 {
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+@media screen and (max-width: 767px) {
+  .u-fz20 {
+    font-size: 1.25rem;
+  }
+}
+
+.u-fz22 {
+  font-size: 22px;
+  font-size: 1.375rem;
+}
+@media screen and (max-width: 767px) {
+  .u-fz22 {
+    font-size: 1.375rem;
+  }
+}
+
+.u-fz24 {
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 767px) {
+  .u-fz24 {
+    font-size: 1.5rem;
+  }
+}
+
+.u-fz26 {
+  font-size: 26px;
+  font-size: 1.625rem;
+}
+@media screen and (max-width: 767px) {
+  .u-fz26 {
+    font-size: 1.625rem;
+  }
+}
+
+.u-fz28 {
+  font-size: 28px;
+  font-size: 1.75rem;
+}
+@media screen and (max-width: 767px) {
+  .u-fz28 {
+    font-size: 1.75rem;
+  }
+}
+
+.u-fz30 {
+  font-size: 30px;
+  font-size: 1.875rem;
+}
+@media screen and (max-width: 767px) {
+  .u-fz30 {
+    font-size: 1.875rem;
+  }
+}
+
 @media (min-width: 600px) {
   a[href*="tel:"] {
     pointer-events: none;
